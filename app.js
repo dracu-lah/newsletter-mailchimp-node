@@ -2,7 +2,8 @@
 listId = "9ab12ddad4";
 // Mail Chimp Api Key
 apiKey = "26546fd5150df27a46474147124cf8cb-us21";
-
+// Port
+port = process.env.PORT || 3000;
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -61,6 +62,6 @@ app.post("failure", (req, res)=>{
   res.redirect("/")
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server started at port 3000");
 });
